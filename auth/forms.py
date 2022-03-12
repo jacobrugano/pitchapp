@@ -3,7 +3,7 @@ from wtforms import StringField,PasswordField,SubmitField # we import some input
 from wtforms.validators import InputRequired,Email,EqualTo 
                          # validators to ensure that the user input follows a proper email address structure 
                          # EqualTo  helps us in comparing the two password inputs.
-from ..models import User
+from models import User
 from wtforms import ValidationError
 from wtforms import StringField,PasswordField,BooleanField,SubmitField
 
