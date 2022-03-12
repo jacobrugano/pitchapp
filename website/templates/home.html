@@ -1,0 +1,126 @@
+<section style="background-image: url(https://images.pexels.com/photos/1229861/pexels-photo-1229861.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940); background-attachment: fixed;">
+{% extends "base.html" %} {% block title %}PitchesApp{% endblock %} {% block content
+%}
+  <h2 text-align="center" style="color: white"">Pitches</h2>
+
+<div>
+  <div class="form-control" style="color: black; opacity: 0.5; box-shadow: inset; border: 5px solid rgb(238, 18, 18);
+  border-radius: 20px 20px; height: 90px;">
+   <ul>
+     <li>Category: Interview Pitch</li>
+     <li>Pitch: CategoryThe pitches are organized by category. You can have different categories like pickup lines, interview pitch, product pitch, promotion pitch.</li>
+   </ul>
+  </div>
+  <ul class="list-group list-group-flush" id="notes">
+    {% for note in user.notes %}
+    <li class="list-group-item" style="opacity: 0.3; box-shadow: inset; border: 5px solid rgb(43, 34, 34);
+    border-radius: 20px 20px;">
+      {{ note.data }}
+      <button type="button" class="close" onClick="deleteNote({{ note.id }})">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </li>
+    {% endfor %}
+  </ul>
+  <form method="POST">
+    <textarea name="note" id="note" class="form-control" style="opacity: 0.3; box-shadow: inset; border: 5px solid rgb(43, 34, 34);
+    border-radius: 20px 20px;" placeholder="Type your comment here:..."></textarea>
+    <div text-align="center">
+      <button type="submit" class="btn btn-primary">Add Comment</button>
+      <button type="submit" class="btn btn-primary">Upvote:0</button>
+      <button type="submit" class="btn btn-primary">Downvote:0</button>
+    </div>
+  </form>
+</div>
+
+<br />
+
+
+<div>
+  <div class="form-control" style="color: black; opacity: 0.5; box-shadow: inset; border: 5px solid rgb(238, 18, 18);
+  border-radius: 20px 20px; height: 90px;">
+   <ul>
+     <li>Category: Product Pitch</li>
+     <li>Pitch: CategoryThe pitches are organized by category. You can have different categories like pickup lines, interview pitch, product pitch, promotion pitch.</li>
+   </ul>
+  </div>
+  <ul class="list-group list-group-flush" id="notes">
+    {% for note in user.notes %}
+    <li class="list-group-item" style="opacity: 0.3; box-shadow: inset; border: 5px solid rgb(43, 34, 34);
+    border-radius: 20px 20px;">
+      {{ note.data }}
+      <button type="button" class="close" onClick="deleteNote({{ note.id }})">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </li>
+    {% endfor %}
+  </ul>
+  <form method="POST">
+    <textarea name="note" id="note" class="form-control" placeholder="Type here..." style="opacity: 0.3; box-shadow: inset; border: 5px solid rgb(43, 34, 34);
+    border-radius: 20px 20px;" placeholder="Type your comment here:...""></textarea>
+    <div text-align="center">
+      <button type="submit" class="btn btn-primary">Add Comment</button>
+      <button type="submit" class="btn btn-primary">Upvote:0</button>
+      <button type="submit" class="btn btn-primary">Downvote:0</button>
+    </div>
+  </form>
+</div>
+
+
+<br />
+
+<div>
+  <div class="form-control" style="color: black; opacity: 0.5; box-shadow: inset; border: 5px solid rgb(238, 18, 18);
+  border-radius: 20px 20px; height: 90px;">
+   <ul>
+     <li>Category: Promotion Pitch</li>
+     <li>Pitch: CategoryThe pitches are organized by category. You can have different categories like pickup lines, interview pitch, product pitch, promotion pitch.</li>
+   </ul>
+  </div>
+  <ul class="list-group list-group-flush" id="notes">
+    {% for note in user.notes %}
+    <li class="list-group-item" style="opacity: 0.3; box-shadow: inset; border: 5px solid rgb(43, 34, 34);
+    border-radius: 20px 20px;">
+      {{ note.data }}
+      <button type="button" class="close" onClick="deleteNote({{ note.id }})">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </li>
+    {% endfor %}
+  </ul>
+  <form method="POST">
+    <textarea name="note" id="note" class="form-control" style="opacity: 0.3; box-shadow: inset; border: 5px solid rgb(43, 34, 34);
+    border-radius: 20px 20px;" placeholder="Type your comment here:..."></textarea>
+    <div text-align="center">
+      <button type="submit" class="btn btn-primary">Add Comment</button>
+      <button type="submit" class="btn btn-primary">Upvote:0</button>
+      <button type="submit" class="btn btn-primary">Downvote:0</button>
+    </div>
+  </form>
+</div>
+
+<br />
+
+
+<form method="POST">
+  <div text-align="center">
+    <button type="submit" class="btn btn-primary">Add Your Pitch(Start with category name then the pitch)</button>
+    <textarea name="note" id="note" class="form-control" style="opacity: 0.3; box-shadow: inset; border: 5px solid rgb(43, 34, 34);
+    border-radius: 20px 20px;" placeholder="Add your pitch here starting with category then the pitch:......"></textarea>  
+  </div>
+</form>
+<div>
+  <ul class="list-group list-group-flush" id="notes">
+    {% for note in user.notes %}
+    <li class="list-group-item" style="opacity: 0.3; box-shadow: inset; border: 5px solid rgb(43, 34, 34);
+    border-radius: 20px 20px;">
+      {{ note.data }}
+      <button type="button" class="close" onClick="deleteNote({{ note.id }})">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+{% endblock %}
+</section>
