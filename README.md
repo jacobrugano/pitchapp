@@ -5,7 +5,7 @@
 This is a flask application that allows users to post one minute pitches and also allows other users who have signed up to comment and upvote or downvote a pitch. It also allows a person to signup to be able to access the functionalities of the application
 
  ------------------------------------------------------------
-### Live link:
+### Live link: https://pitchapp20.herokuapp.com/sign-up
  ------------------------------------------------------------
 ## User story
 1) Comment on the different pitches posted py other uses.
@@ -28,7 +28,7 @@ Development Installation
  ------------------------------------------------------------
 ## Cloning the repository:
 ------------------------------------------------------------
-1) Copy this link:https://github.com/jacobrugano/pitches.git
+1) Copy this link:https://github.com/jacobrugano/pitchap.git
 2) Navigate to the folder and install the requirements
 3) cd into pitches
 4) pip install -r requirements.txt
